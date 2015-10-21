@@ -33,7 +33,7 @@ shinyServer(function(input, output) {
         if (input$show_forecast) {
             # plot the time series forecast using decomposition
             fit <- arima(tsData, order=c(1,0,0), list(order=c(2,1,0), period=12))
-            fore <- predict(fit, n.ahead=24)
+            fore <- predict(fit, n.ahead=12*input$years)
             # error bounds at 95% confidence level
             U <- fore$pred + 2*fore$se
             L <- fore$pred - 2*fore$se
