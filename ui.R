@@ -26,6 +26,12 @@ shinyUI(bootstrapPage(
         checkboxInput(inputId = "show_forecast",
                       label = strong("Show Time Series Forecast using ARIMA"),
                       value = FALSE),
+        conditionalPanel(condition = "input.show_forecast == true",
+                         
+          sliderInput("years", "Years to Forecast",
+                      1, 10, 2, step = 1)
+        ),
+
         verbatimTextOutput("dataset_txt"),
         
         tags$a(href="https://github.com/uioreanu/devdataprod-033-project/", "R source code on github")
