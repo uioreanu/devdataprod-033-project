@@ -62,7 +62,7 @@ arima(AirPassengers, order=c(1,0,0))
 ## Final slide
 
 And finaly, the links to the Shiny Web Application: 
-- [Time Series Decomposition](https://github.com/uioreanu/devdataprod-033-project), 
+- [Time Series Decomposition](https://calin.shinyapps.io/devdataprod-033-project), 
 - the [R source code](https://github.com/uioreanu/devdataprod-033-project) hosted on github.
 
 An alternative is to use the [stats::stl()](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/stl.html) Seasonal Decomposition of Time Series by Loess function.
